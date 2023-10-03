@@ -35,3 +35,14 @@ Route::get('/subcategories', [App\Http\Controllers\SubCategoryController::class,
 Route::post('/subcategory-store', [App\Http\Controllers\SubCategoryController::class, 'SubCategoryStore'])->name('SubCategoryStore');
 Route::post('/subcategory-udpate', [App\Http\Controllers\SubCategoryController::class, 'SubCategoryUpdate'])->name('SubCategoryUpdate');
 Route::get('/subcategory-delete/{id}', [App\Http\Controllers\SubCategoryController::class, 'SubCategoryDelete'])->name('SubCategoryDelete');
+Route::get('/subcategory-restore/{id}', [App\Http\Controllers\SubCategoryController::class, 'SubCategoryRestore'])->name('SubCategoryRestore');
+Route::get('/subcategory-pdelete/{id}', [App\Http\Controllers\SubCategoryController::class, 'SubCategoryPdelete'])->name('SubCategoryPdelete');
+
+
+
+Route::prefix('admin')->group(function () {
+    Route::resource('color', 'App\Http\Controllers\ColorController');
+});
+
+
+

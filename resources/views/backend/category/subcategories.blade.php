@@ -152,8 +152,8 @@
                 <td>{{ $subcatsview->category_id ?? "NA" }}</td>
                 <td>{{ $subcatsview->created_at != null ? $subcatsview->created_at->diffForHumans() : 'N/A' }}</td>
                     <td style="display: flex">
-                        <a class="btn btn-outline-primary mr-1" href="{{ $subcatsview->slug }}" type="button" class="btn btn-primary" title="Restore"><i class="icon ion-refresh"></i></a>
-                        <a class="btn btn-outline-danger" title="Permanent Delete" href="{{ route('SubCategoryDelete', $subcatsview->id) }}"><i class="icon ion-trash-b"></i></a>
+                        <a class="btn btn-outline-primary mr-1" href="{{ route('SubCategoryRestore', $subcatsview->id ) }}" type="button" class="btn btn-primary" title="Restore"><i class="icon ion-refresh"></i></a>
+                        <a class="btn btn-outline-danger" title="Permanent Delete" href="{{ route('SubCategoryPdelete', $subcatsview->id) }}"><i class="icon ion-trash-b"></i></a>
                     </td>
             </tr>
             @endforeach

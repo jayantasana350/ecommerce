@@ -42,4 +42,14 @@ class SubCategoryController extends Controller
         SubCategory::find($id)->delete();
         return back();
     }
+
+    function SubCategoryRestore($id){
+        SubCategory::withTrashed()->find($id)->restore();
+        return back();
+    }
+
+    function SubCategoryPdelete($id){
+        SubCategory::withTrashed()->find($id)->forceDelete();
+        return back();
+    }
 }

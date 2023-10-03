@@ -85,12 +85,14 @@
         <a href="#" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
-            <span class="menu-item-label">Customers</span>
+            <span class="menu-item-label">Attributes</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
         </a><!-- br-menu-link -->
         <ul class="br-menu-sub nav flex-column">
-          <li class="nav-item"><a href="chart-morris.html" class="nav-link">Customer Lists</a></li>
+          <li class="nav-item"><a href="{{ route('color.index') }}" class="nav-link">Colors</a></li>
+          <li class="nav-item"><a href="chart-morris.html" class="nav-link">Sizes</a></li>
+          <li class="nav-item"><a href="chart-morris.html" class="nav-link">Styles</a></li>
         </ul>
         <a href="#" class="br-menu-link">
           <div class="br-menu-item">
@@ -832,6 +834,7 @@
     @yield('content')
 
     <script src="{{ asset('admin/lib/jquery/jquery.js') }}"></script>
+    <script src="//code.jquery.com/jquery-3.3.0.min.js"></script>
     <script src="{{ asset('admin/lib/popper.js/popper.js') }}"></script>
     <script src="{{ asset('admin/lib/bootstrap/bootstrap.js') }}"></script>
     <script src="{{ asset('admin/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js') }}"></script>
@@ -848,6 +851,7 @@
     <script src="{{ asset('admin/js/bracket.js') }}"></script>
     <script src="{{ asset('admin/js/ResizeSensor.js') }}"></script>
     <script src="{{ asset('admin/js/dashboard.js') }}"></script>
+    @yield('footer_js')
     <script>
       $(function(){
         'use strict'
@@ -876,5 +880,6 @@
         }
       });
     </script>
+
   </body>
 </html>
